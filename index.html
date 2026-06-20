@@ -72,7 +72,7 @@
       border-bottom: 1px solid rgba(118,243,255,.16);
     }
     .header-inner {
-      min-height: 74px;
+      min-height: 62px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -84,9 +84,9 @@
       gap: 12px;
       min-width: 220px;
     }
-    .brand img { width: 46px; height: 46px; border-radius: 14px; box-shadow: 0 0 26px rgba(49,220,255,.24); }
-    .brand strong { display: block; font-size: 1rem; letter-spacing: .08em; }
-    .brand span { display: block; color: var(--soft); font-size: .78rem; margin-top: -2px; }
+    .brand img { width: 42px; height: 42px; border-radius: 13px; box-shadow: 0 0 26px rgba(49,220,255,.24); }
+    .brand strong { display: block; font-size: .98rem; letter-spacing: .08em; }
+    .brand span { display: block; color: var(--soft); font-size: .76rem; margin-top: -2px; }
     nav { display: flex; align-items: center; gap: 18px; color: #dcefff; font-size: .92rem; }
     nav a { opacity: .86; }
     nav a:hover { opacity: 1; color: var(--cyan2); }
@@ -120,7 +120,10 @@
     }
     .hero {
       position: relative;
-      padding: clamp(58px, 8vw, 112px) 0 50px;
+      padding: clamp(24px, 3.8vw, 52px) 0 clamp(26px, 4vw, 46px);
+      min-height: calc(100vh - 62px);
+      display: grid;
+      align-items: center;
     }
     .hero:before {
       content: "";
@@ -138,15 +141,46 @@
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: 1.05fr .72fr;
-      gap: clamp(28px, 5vw, 64px);
+      grid-template-columns: minmax(0, 1.03fr) minmax(390px, .72fr);
+      gap: clamp(22px, 3.5vw, 46px);
       align-items: center;
+    }
+    .hero-copy {
+      max-width: 790px;
+    }
+    .hero-brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding: 10px 13px;
+      border: 1px solid rgba(118,243,255,.24);
+      border-radius: 22px;
+      background: rgba(4,18,38,.72);
+      box-shadow: 0 18px 42px rgba(0,0,0,.22);
+    }
+    .hero-brand-mark img {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      box-shadow: 0 0 28px rgba(49,220,255,.3);
+    }
+    .hero-brand-mark strong {
+      display:block;
+      letter-spacing:.1em;
+      font-size:.98rem;
+    }
+    .hero-brand-mark span {
+      display:block;
+      color:var(--soft);
+      font-size:.82rem;
+      margin-top:-2px;
     }
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       padding: 8px 12px;
       border: 1px solid rgba(118,243,255,.26);
       background: rgba(49,220,255,.07);
@@ -159,10 +193,10 @@
     .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 18px var(--green); }
     h1 {
       margin: 0;
-      max-width: 940px;
-      font-size: clamp(2.6rem, 6.4vw, 5.8rem);
-      line-height: .93;
-      letter-spacing: -.075em;
+      max-width: 860px;
+      font-size: clamp(2.45rem, 5.15vw, 4.8rem);
+      line-height: .94;
+      letter-spacing: -.07em;
     }
     .gradient-text {
       background: linear-gradient(135deg, #fff, var(--cyan2) 48%, #ffbf80 90%);
@@ -170,13 +204,14 @@
       color: transparent;
     }
     .lead {
-      max-width: 780px;
-      margin: 22px 0 0;
+      max-width: 760px;
+      margin: 16px 0 0;
       color: #d5e7f3;
-      font-size: clamp(1.06rem, 1.7vw, 1.28rem);
+      font-size: clamp(1rem, 1.35vw, 1.14rem);
+      line-height: 1.55;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
     .chip {
       padding: 8px 11px;
       border: 1px solid rgba(255,255,255,.13);
@@ -187,12 +222,15 @@
     }
     .visual-card {
       position: relative;
-      min-height: 600px;
-      border: 1px solid rgba(118,243,255,.22);
+      height: clamp(500px, 69vh, 650px);
+      min-height: 500px;
+      border: 1px solid rgba(118,243,255,.24);
       background:
-        linear-gradient(180deg, rgba(49,220,255,.12), rgba(255,140,45,.06)),
-        rgba(5, 18, 39, .72);
-      border-radius: 38px;
+        radial-gradient(circle at 78% 18%, rgba(49,220,255,.18), transparent 20rem),
+        radial-gradient(circle at 28% 88%, rgba(255,140,45,.14), transparent 18rem),
+        linear-gradient(180deg, rgba(49,220,255,.1), rgba(255,140,45,.055)),
+        rgba(5, 18, 39, .82);
+      border-radius: 34px;
       box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
       overflow: hidden;
     }
@@ -205,36 +243,43 @@
     }
     .mascot {
       position: absolute;
-      right: -2%;
-      bottom: -2%;
-      width: min(96%, 520px);
-      filter: drop-shadow(0 28px 45px rgba(0,0,0,.48));
+      right: 50%;
+      transform: translateX(52%);
+      bottom: 0;
+      width: min(92%, 500px);
+      max-height: 92%;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 28px 45px rgba(0,0,0,.52));
+      z-index: 2;
     }
     .signal-box {
       position: absolute;
       left: 22px;
       top: 22px;
-      width: min(78%, 340px);
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(2, 7, 18, .72);
-      border: 1px solid rgba(118,243,255,.2);
+      width: min(70%, 320px);
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(2, 7, 18, .78);
+      border: 1px solid rgba(118,243,255,.22);
       backdrop-filter: blur(10px);
+      z-index: 4;
     }
     .signal-box strong { display: block; font-size: 1.02rem; }
     .signal-box span { display: block; color: var(--muted); font-size: .93rem; margin-top: 6px; }
     .score {
       position: absolute;
       left: 22px;
+      right: 22px;
       bottom: 22px;
       display: grid;
       gap: 8px;
-      width: min(84%, 380px);
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(2, 7, 18, .76);
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(2, 7, 18, .78);
       border: 1px solid rgba(255,140,45,.28);
       backdrop-filter: blur(10px);
+      z-index: 5;
     }
     .bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,.09); overflow: hidden; }
     .bar span { display: block; height: 100%; width: 88%; background: linear-gradient(90deg, var(--cyan), var(--orange)); }
@@ -458,25 +503,27 @@
     .disclaimer { font-size: .88rem; color: #96aabd; max-width: 900px; }
     @media (max-width: 1080px) {
       nav { display: none; }
+      .hero { min-height: auto; padding-top: 34px; }
       .hero-grid, .form-panel, .footer-grid { grid-template-columns: 1fr; }
-      .visual-card { min-height: 520px; max-width: 620px; margin-inline: auto; width: 100%; }
+      .visual-card { height: 560px; min-height: 520px; max-width: 620px; margin-inline: auto; width: 100%; }
       .matrix, .grid.four, .proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid.three, .checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-links { justify-content: flex-start; }
     }
     @media (max-width: 720px) {
       .wrap { width: min(100% - 28px, var(--max)); }
-      .header-inner { min-height: 66px; }
+      .header-inner { min-height: 62px; }
       .brand { min-width: 0; }
       .brand img { width: 40px; height: 40px; }
-      .brand span { display: none; }
+      .brand span span { display: none; }
       .header-inner > .btn { display: none; }
-      .hero { padding-top: 42px; }
+      .hero { padding-top: 24px; }
+      .hero-brand-mark { width: 100%; margin-bottom: 12px; }
       .hero-actions .btn { width: 100%; }
-      .visual-card { min-height: 500px; border-radius: 26px; }
-      .mascot { width: 112%; right: -14%; }
-      .signal-box, .score { left: 14px; width: calc(100% - 28px); }
-      .score { bottom: 14px; }
+      .visual-card { height: 530px; min-height: 500px; border-radius: 26px; }
+      .mascot { width: 100%; max-height: 84%; right: 50%; transform: translateX(50%); }
+      .signal-box { left: 14px; right: 14px; width: auto; padding: 14px; }
+      .score { left: 14px; right: 14px; bottom: 14px; width: auto; }
       .comparison, .prompt-list, .matrix, .grid.two, .grid.three, .grid.four, .checklist, .proof-strip { grid-template-columns: 1fr; }
       .card, .answer, .compare-card { padding: 20px; }
       section { padding: 48px 0; }
@@ -581,9 +628,13 @@
   <main id="main">
     <section class="hero">
       <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> KRONATRIX AI.SEO / AI Chat Visibility</div>
-          <h1>How to <span class="gradient-text">Show Up on AI Chats</span> When People Search for Businesses Like Yours</h1>
+        <div class="hero-copy">
+          <div class="hero-brand-mark">
+            <img src="logo.webp" width="54" height="54" alt="KRONATRIX glowing K logo" decoding="async">
+            <div><strong>KRONATRIX</strong><span>AI.SEO Authority System</span></div>
+          </div>
+          <div class="eyebrow"><span class="dot"></span> AI Chat Visibility / AI Recommendation Websites</div>
+          <h1><span class="gradient-text">Show Up on AI Chats</span> When People Search for Businesses Like Yours</h1>
           <p class="lead">A business improves its chance of showing up on AI chats by making its website clear, crawlable, structured, useful, proof-backed, fast and easy to compare. KRONATRIX builds AI Recommendation Websites that help AI systems and humans understand who you are, what you do, who you help, where you operate, why you can be trusted and what action a visitor should take next. No one can honestly guarantee AI recommendations, but better foundations improve recommendation-readiness.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#free-check">Get a Free AI Visibility Check</a>

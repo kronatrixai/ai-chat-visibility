@@ -72,3 +72,10 @@ https://aichatvisibility.kronatrix.co.uk/
 ## No-guarantee statement
 
 KRONATRIX does not guarantee AI recommendations, rankings, citations, traffic, leads or sales. This website improves clarity, crawlability, structure, proof and recommendation-readiness.
+
+
+Opening-screen layout revision:
+- Hero spacing reduced for desktop.
+- Spencer Aurelius image placed inside a controlled visual card with better scaling.
+- KRONATRIX branding strengthened above the fold.
+- No assets folder added; flat-root upload system preserved.

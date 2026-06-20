@@ -63,3 +63,10 @@ Do not create an assets folder.
 Do not move the images.
 Do not rename files.
 All image files must stay beside index.html.
+
+
+Opening-screen layout revision:
+- Hero spacing reduced for desktop.
+- Spencer Aurelius image placed inside a controlled visual card with better scaling.
+- KRONATRIX branding strengthened above the fold.
+- No assets folder added; flat-root upload system preserved.

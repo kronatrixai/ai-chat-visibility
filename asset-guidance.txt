@@ -22,3 +22,10 @@ Social preview:
 og-image.webp is the Open Graph and Twitter/X preview image.
 
 All files must remain in the same folder as index.html for GitHub upload.
+
+
+Opening-screen layout revision:
+- Hero spacing reduced for desktop.
+- Spencer Aurelius image placed inside a controlled visual card with better scaling.
+- KRONATRIX branding strengthened above the fold.
+- No assets folder added; flat-root upload system preserved.
