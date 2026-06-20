@@ -70,3 +70,10 @@ Opening-screen layout revision:
 - Spencer Aurelius image placed inside a controlled visual card with better scaling.
 - KRONATRIX branding strengthened above the fold.
 - No assets folder added; flat-root upload system preserved.
+
+
+Hero image fix revision:
+- Spencer Aurelius is now image-first and not covered by text boxes.
+- Mascot is large, centred, visually impressive, and controlled with object-fit.
+- Hero grid top-aligns the mascot card so the visual appears above the fold.
+- KRONATRIX logo glow stays separate from the mascot.
