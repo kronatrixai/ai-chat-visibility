@@ -1,0 +1,65 @@
+KRONATRIX GITHUB UPLOAD INSTRUCTIONS
+
+Project:
+AI Chat Visibility by KRONATRIX
+
+Repo name:
+ai-chat-visibility
+
+Repo description:
+KRONATRIX AI Chat Visibility site for businesses that want to become easier for AI chats, answer engines and search systems to understand, compare and potentially recommend.
+
+Final URL:
+https://aichatvisibility.kronatrix.co.uk/
+
+CNAME content:
+aichatvisibility.kronatrix.co.uk
+
+STEP 1
+Unzip the ZIP.
+
+STEP 2
+Open the unzipped folder named:
+ai-chat-visibility
+
+STEP 3
+Select every file inside the folder.
+
+STEP 4
+Drag all selected files into GitHub's Upload files screen.
+
+STEP 5
+Wait until GitHub shows every file in the list.
+
+STEP 6
+Click Commit changes.
+
+STEP 7
+Enable GitHub Pages from:
+main branch / root folder
+
+STEP 8
+Add this DNS CNAME record in GoDaddy or Namecheap:
+
+Type: CNAME
+Host: aichatvisibility
+Points to: kronatrixai.github.io
+TTL: Default / 1 hour
+
+STEP 9
+Add this GitHub Pages custom domain:
+aichatvisibility.kronatrix.co.uk
+
+STEP 10
+Submit this sitemap in Google Search Console:
+https://aichatvisibility.kronatrix.co.uk/sitemap.xml
+
+STEP 11
+Request indexing for the homepage:
+https://aichatvisibility.kronatrix.co.uk/
+
+IMPORTANT
+Do not create an assets folder.
+Do not move the images.
+Do not rename files.
+All image files must stay beside index.html.

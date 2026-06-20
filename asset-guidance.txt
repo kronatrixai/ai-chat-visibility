@@ -1,0 +1,24 @@
+ASSET GUIDANCE
+
+This KRONATRIX site uses flat root image paths only.
+
+Required image files:
+- logo.webp
+- mascot.webp
+- og-image.webp
+- favicon-32.png
+- favicon-64.png
+- apple-touch-icon.png
+
+Do not place images inside an assets folder.
+
+Logo:
+logo.webp is the KRONATRIX glowing K symbol.
+
+Mascot:
+mascot.webp is Spencer Aurelius, the KRONATRIX mascot.
+
+Social preview:
+og-image.webp is the Open Graph and Twitter/X preview image.
+
+All files must remain in the same folder as index.html for GitHub upload.

@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Chat Visibility by KRONATRIX | Show Up on AI Chats</title>
+  <meta name="description" content="KRONATRIX builds AI Chat Visibility websites that help businesses become clearer, more crawlable, proof-backed and easier for AI systems to understand, compare and recommend when relevant.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://aichatvisibility.kronatrix.co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Chat Visibility by KRONATRIX">
+  <meta property="og:description" content="How to help your business show up when people ask AI chats for recommendations, comparisons and trusted providers.">
+  <meta property="og:url" content="https://aichatvisibility.kronatrix.co.uk/">
+  <meta property="og:image" content="https://aichatvisibility.kronatrix.co.uk/og-image.webp">
+  <meta property="og:site_name" content="AI Chat Visibility by KRONATRIX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Chat Visibility by KRONATRIX">
+  <meta name="twitter:description" content="Prompt-answer-first websites built to improve AI recommendation-readiness.">
+  <meta name="twitter:image" content="https://aichatvisibility.kronatrix.co.uk/og-image.webp">
+  <meta name="theme-color" content="#051327">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" as="image" href="logo.webp">
+  <link rel="preload" as="image" href="mascot.webp">
+  <style>
+    :root {
+      --bg: #020712;
+      --bg2: #071427;
+      --panel: rgba(9, 25, 53, .82);
+      --panel2: rgba(12, 38, 76, .72);
+      --line: rgba(103, 230, 255, .28);
+      --line2: rgba(255, 142, 43, .32);
+      --text: #eef9ff;
+      --muted: #b8c7d6;
+      --soft: #83a1b9;
+      --cyan: #31dcff;
+      --cyan2: #76f3ff;
+      --blue: #287aff;
+      --orange: #ff8c2d;
+      --green: #6dffbd;
+      --danger: #ff6d7a;
+      --shadow: 0 28px 80px rgba(0,0,0,.42);
+      --radius: 26px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(49,220,255,.16), transparent 34rem),
+        radial-gradient(circle at 86% 0%, rgba(255,140,45,.16), transparent 31rem),
+        radial-gradient(circle at 54% 66%, rgba(40,122,255,.12), transparent 39rem),
+        linear-gradient(180deg, #020712 0%, #071225 42%, #020712 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin-inline: auto; }
+    .skip { position: absolute; left: -999px; top: 8px; z-index: 20; background: #fff; color: #000; padding: 10px 14px; border-radius: 10px; }
+    .skip:focus { left: 8px; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(2, 7, 18, .78);
+      border-bottom: 1px solid rgba(118,243,255,.16);
+    }
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+    .brand img { width: 46px; height: 46px; border-radius: 14px; box-shadow: 0 0 26px rgba(49,220,255,.24); }
+    .brand strong { display: block; font-size: 1rem; letter-spacing: .08em; }
+    .brand span { display: block; color: var(--soft); font-size: .78rem; margin-top: -2px; }
+    nav { display: flex; align-items: center; gap: 18px; color: #dcefff; font-size: .92rem; }
+    nav a { opacity: .86; }
+    nav a:hover { opacity: 1; color: var(--cyan2); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(118,243,255,.32);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -.01em;
+      box-shadow: 0 14px 38px rgba(0,0,0,.22);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(118,243,255,.8); background: rgba(118,243,255,.1); }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #00101b;
+      border-color: transparent;
+      box-shadow: 0 18px 50px rgba(49,220,255,.24);
+    }
+    .btn.orange {
+      background: linear-gradient(135deg, var(--orange), #ffd08e);
+      color: #170900;
+      border-color: transparent;
+    }
+    .hero {
+      position: relative;
+      padding: clamp(58px, 8vw, 112px) 0 50px;
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 24px -20vw auto auto;
+      width: 62vw;
+      height: 62vw;
+      max-width: 760px;
+      max-height: 760px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(49,220,255,.18), transparent 62%);
+      filter: blur(10px);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr .72fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(118,243,255,.26);
+      background: rgba(49,220,255,.07);
+      color: var(--cyan2);
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .86rem;
+      letter-spacing: .03em;
+    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 18px var(--green); }
+    h1 {
+      margin: 0;
+      max-width: 940px;
+      font-size: clamp(2.6rem, 6.4vw, 5.8rem);
+      line-height: .93;
+      letter-spacing: -.075em;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #fff, var(--cyan2) 48%, #ffbf80 90%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      max-width: 780px;
+      margin: 22px 0 0;
+      color: #d5e7f3;
+      font-size: clamp(1.06rem, 1.7vw, 1.28rem);
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .chip {
+      padding: 8px 11px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.055);
+      border-radius: 999px;
+      color: #d9edf8;
+      font-size: .9rem;
+    }
+    .visual-card {
+      position: relative;
+      min-height: 600px;
+      border: 1px solid rgba(118,243,255,.22);
+      background:
+        linear-gradient(180deg, rgba(49,220,255,.12), rgba(255,140,45,.06)),
+        rgba(5, 18, 39, .72);
+      border-radius: 38px;
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+    .visual-card:before {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .mascot {
+      position: absolute;
+      right: -2%;
+      bottom: -2%;
+      width: min(96%, 520px);
+      filter: drop-shadow(0 28px 45px rgba(0,0,0,.48));
+    }
+    .signal-box {
+      position: absolute;
+      left: 22px;
+      top: 22px;
+      width: min(78%, 340px);
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(2, 7, 18, .72);
+      border: 1px solid rgba(118,243,255,.2);
+      backdrop-filter: blur(10px);
+    }
+    .signal-box strong { display: block; font-size: 1.02rem; }
+    .signal-box span { display: block; color: var(--muted); font-size: .93rem; margin-top: 6px; }
+    .score {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      display: grid;
+      gap: 8px;
+      width: min(84%, 380px);
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(2, 7, 18, .76);
+      border: 1px solid rgba(255,140,45,.28);
+      backdrop-filter: blur(10px);
+    }
+    .bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,.09); overflow: hidden; }
+    .bar span { display: block; height: 100%; width: 88%; background: linear-gradient(90deg, var(--cyan), var(--orange)); }
+    section { padding: clamp(54px, 7vw, 92px) 0; }
+    .section-head {
+      max-width: 860px;
+      margin-bottom: 28px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 16px 0 0;
+    }
+    .answer {
+      padding: clamp(24px, 4vw, 42px);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(49,220,255,.13), rgba(255,140,45,.08));
+      border: 1px solid rgba(118,243,255,.28);
+      box-shadow: var(--shadow);
+    }
+    .answer p { font-size: clamp(1.1rem, 2vw, 1.38rem); margin: 0; color: #edfaff; }
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      padding: 22px;
+      border-radius: 22px;
+      background: var(--panel);
+      border: 1px solid rgba(118,243,255,.16);
+      box-shadow: 0 18px 44px rgba(0,0,0,.18);
+    }
+    .card h3 { margin: 0 0 9px; font-size: 1.12rem; letter-spacing: -.02em; }
+    .card p { margin: 0; color: var(--muted); }
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      background: rgba(49,220,255,.12);
+      color: var(--cyan2);
+      border: 1px solid rgba(49,220,255,.24);
+      font-weight: 900;
+    }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .matrix-item {
+      min-height: 136px;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .matrix-item strong { display: block; color: #fff; margin-bottom: 6px; }
+    .matrix-item span { color: var(--muted); font-size: .94rem; }
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .compare-card {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.045);
+    }
+    .compare-card.good {
+      border-color: rgba(49,220,255,.28);
+      background: linear-gradient(180deg, rgba(49,220,255,.09), rgba(255,255,255,.04));
+    }
+    ul.clean {
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+    ul.clean li {
+      display: flex;
+      gap: 10px;
+      color: #d6e6f0;
+      align-items: flex-start;
+    }
+    ul.clean li:before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      line-height: 1.3;
+    }
+    .compare-card.bad ul.clean li:before { content: "×"; color: var(--danger); }
+    .prompt-list {
+      counter-reset: prompts;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .prompt {
+      counter-increment: prompts;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(49,220,255,.055);
+      border: 1px solid rgba(49,220,255,.18);
+      color: #eaf9ff;
+      font-weight: 750;
+    }
+    .prompt:before {
+      content: counter(prompts);
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 9px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.08);
+      color: var(--cyan2);
+      font-size: .88rem;
+    }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .check {
+      padding: 14px 15px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+      color: #ddecf5;
+      font-weight: 680;
+    }
+    .check:before { content: "✓ "; color: var(--green); }
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .proof-pill {
+      padding: 15px;
+      border-radius: 18px;
+      background: rgba(2,7,18,.62);
+      border: 1px solid rgba(118,243,255,.14);
+      color: #dcecf6;
+      font-weight: 740;
+    }
+    .scarcity {
+      border-color: rgba(255,140,45,.28);
+      background: linear-gradient(135deg, rgba(255,140,45,.12), rgba(49,220,255,.06));
+    }
+    .form-panel {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      align-items: start;
+      padding: clamp(24px, 4vw, 38px);
+      border-radius: 32px;
+      border: 1px solid rgba(118,243,255,.24);
+      background: rgba(5, 18, 39, .82);
+      box-shadow: var(--shadow);
+    }
+    form { display: grid; gap: 12px; }
+    label { display: grid; gap: 6px; color: #e7f5fb; font-weight: 780; }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid rgba(118,243,255,.2);
+      background: rgba(2,7,18,.72);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus { border-color: rgba(118,243,255,.7); box-shadow: 0 0 0 4px rgba(49,220,255,.1); }
+    textarea { min-height: 128px; resize: vertical; }
+    .micro { color: var(--soft); font-size: .92rem; }
+    .cta-band {
+      padding: clamp(26px, 5vw, 54px);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(255,140,45,.22), transparent 28rem),
+        linear-gradient(135deg, rgba(49,220,255,.14), rgba(40,122,255,.1));
+      border: 1px solid rgba(118,243,255,.28);
+      box-shadow: var(--shadow);
+    }
+    .cta-band h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.9rem); line-height: 1; letter-spacing: -.055em; }
+    .cta-band p { max-width: 780px; color: #d6e7f0; font-size: 1.1rem; }
+    details {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.11);
+      background: rgba(255,255,255,.045);
+      padding: 16px 18px;
+    }
+    details + details { margin-top: 10px; }
+    summary { cursor: pointer; font-weight: 850; color: #fff; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+    .footer {
+      padding: 42px 0;
+      border-top: 1px solid rgba(118,243,255,.16);
+      background: rgba(0,0,0,.16);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .footer a { color: var(--cyan2); }
+    .footer p { color: var(--soft); margin: 10px 0 0; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+    .disclaimer { font-size: .88rem; color: #96aabd; max-width: 900px; }
+    @media (max-width: 1080px) {
+      nav { display: none; }
+      .hero-grid, .form-panel, .footer-grid { grid-template-columns: 1fr; }
+      .visual-card { min-height: 520px; max-width: 620px; margin-inline: auto; width: 100%; }
+      .matrix, .grid.four, .proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid.three, .checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-links { justify-content: flex-start; }
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .header-inner { min-height: 66px; }
+      .brand { min-width: 0; }
+      .brand img { width: 40px; height: 40px; }
+      .brand span { display: none; }
+      .header-inner > .btn { display: none; }
+      .hero { padding-top: 42px; }
+      .hero-actions .btn { width: 100%; }
+      .visual-card { min-height: 500px; border-radius: 26px; }
+      .mascot { width: 112%; right: -14%; }
+      .signal-box, .score { left: 14px; width: calc(100% - 28px); }
+      .score { bottom: 14px; }
+      .comparison, .prompt-list, .matrix, .grid.two, .grid.three, .grid.four, .checklist, .proof-strip { grid-template-columns: 1fr; }
+      .card, .answer, .compare-card { padding: 20px; }
+      section { padding: 48px 0; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kronatrix.co.uk/#organization",
+        "name": "KRONATRIX",
+        "url": "https://kronatrix.co.uk/",
+        "logo": "https://aichatvisibility.kronatrix.co.uk/logo.webp",
+        "sameAs": [
+          "https://www.youtube.com/@KRONATRIX-AI",
+          "https://www.instagram.com/kronatrix/",
+          "https://x.com/KRONATRIX_",
+          "https://medium.com/@boostyouronlinepresencetoday",
+          "https://uk.linkedin.com/company/kronatrix"
+        ],
+        "description": "KRONATRIX builds AI.SEO and AI Recommendation Websites that help businesses become clearer, more crawlable, more structured and easier for AI systems and humans to understand."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aichatvisibility.kronatrix.co.uk/#website",
+        "url": "https://aichatvisibility.kronatrix.co.uk/",
+        "name": "AI Chat Visibility by KRONATRIX",
+        "publisher": {"@id": "https://kronatrix.co.uk/#organization"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://aichatvisibility.kronatrix.co.uk/#webpage",
+        "url": "https://aichatvisibility.kronatrix.co.uk/",
+        "name": "AI Chat Visibility by KRONATRIX",
+        "isPartOf": {"@id": "https://aichatvisibility.kronatrix.co.uk/#website"},
+        "about": {"@id": "https://kronatrix.co.uk/#organization"},
+        "primaryImageOfPage": "https://aichatvisibility.kronatrix.co.uk/og-image.webp",
+        "description": "A KRONATRIX prompt-answer page explaining how businesses can improve their chance of showing up on AI chats through clarity, proof, structure, speed, schema and authority.",
+        "datePublished": "2026-06-20",
+        "dateModified": "2026-06-20"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://aichatvisibility.kronatrix.co.uk/#service",
+        "name": "AI Chat Visibility Website Build",
+        "provider": {"@id": "https://kronatrix.co.uk/#organization"},
+        "serviceType": "AI.SEO, AI Recommendation Website and AI visibility improvement",
+        "areaServed": "United Kingdom",
+        "url": "https://aichatvisibility.kronatrix.co.uk/",
+        "description": "KRONATRIX creates AI-readable prompt-answer websites that help businesses become easier for AI systems to crawl, understand, compare and recommend when relevant. No recommendation is guaranteed."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://aichatvisibility.kronatrix.co.uk/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"Can KRONATRIX guarantee that AI chats will recommend my business?","acceptedAnswer":{"@type":"Answer","text":"No. No ethical company can guarantee AI chat recommendations, rankings, citations, traffic, leads or sales. KRONATRIX improves the foundations that make a business clearer, more crawlable, better structured and easier to understand."}},
+          {"@type":"Question","name":"What does it mean to show up on AI chats?","acceptedAnswer":{"@type":"Answer","text":"It means your business is clear enough to be found, understood, compared or referenced when people ask AI systems for help. Visibility may come from your website, third-party mentions, structured data, useful answers and authority signals."}},
+          {"@type":"Question","name":"What is AI Chat Visibility?","acceptedAnswer":{"@type":"Answer","text":"AI Chat Visibility is the work of making a business easier for AI systems and humans to understand by improving the website entity, service clarity, proof, prompt-answer content, schema, speed and authority."}},
+          {"@type":"Question","name":"Why might my business not appear in AI answers?","acceptedAnswer":{"@type":"Answer","text":"Common reasons include vague service pages, weak proof, poor crawlability, missing structured data, unclear location, no useful FAQs, thin content, slow pages and weak external authority."}},
+          {"@type":"Question","name":"Is this the same as traditional SEO?","acceptedAnswer":{"@type":"Answer","text":"It overlaps with SEO but goes further. Traditional SEO focuses on search engines and users. AI.SEO also asks whether AI systems can extract the answer, understand the entity and compare the business with alternatives."}},
+          {"@type":"Question","name":"What should my website answer first?","acceptedAnswer":{"@type":"Answer","text":"It should answer who you are, what you do, who you serve, where you operate, why you can be trusted, what proof supports you and what the visitor should do next."}},
+          {"@type":"Question","name":"Does schema help AI chats?","acceptedAnswer":{"@type":"Answer","text":"Schema can help clarify entities, services, FAQs and page context. It is not a magic ranking trick and must match visible content. KRONATRIX uses JSON-LD honestly, without fake reviews or invisible claims."}},
+          {"@type":"Question","name":"What is llms.txt?","acceptedAnswer":{"@type":"Answer","text":"llms.txt is a plain text context file that summarises a site for AI systems and human reviewers. It is not a guarantee of visibility, but it can make important site context easier to access."}},
+          {"@type":"Question","name":"How fast can my site become more AI-readable?","acceptedAnswer":{"@type":"Answer","text":"Technical improvements can be made quickly, especially on a static site. Visibility in search or AI systems depends on crawling, indexing, authority, proof, competition and time."}},
+          {"@type":"Question","name":"What is the first step with KRONATRIX?","acceptedAnswer":{"@type":"Answer","text":"Start with a free AI visibility check. KRONATRIX reviews whether your website clearly explains your business, services, audience, location, proof, FAQs, schema and conversion path."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aichatvisibility.kronatrix.co.uk/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"KRONATRIX","item":"https://kronatrix.co.uk/"},
+          {"@type":"ListItem","position":2,"name":"AI Chat Visibility","item":"https://aichatvisibility.kronatrix.co.uk/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="https://aichatvisibility.kronatrix.co.uk/" aria-label="AI Chat Visibility by KRONATRIX home">
+        <img src="logo.webp" width="46" height="46" alt="KRONATRIX glowing K logo" decoding="async">
+        <span><strong>KRONATRIX</strong><span>AI Chat Visibility</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#answer">Quick answer</a>
+        <a href="#signals">AI signals</a>
+        <a href="#method">Method</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn primary" href="#free-check">Free visibility check</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> KRONATRIX AI.SEO / AI Chat Visibility</div>
+          <h1>How to <span class="gradient-text">Show Up on AI Chats</span> When People Search for Businesses Like Yours</h1>
+          <p class="lead">A business improves its chance of showing up on AI chats by making its website clear, crawlable, structured, useful, proof-backed, fast and easy to compare. KRONATRIX builds AI Recommendation Websites that help AI systems and humans understand who you are, what you do, who you help, where you operate, why you can be trusted and what action a visitor should take next. No one can honestly guarantee AI recommendations, but better foundations improve recommendation-readiness.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#free-check">Get a Free AI Visibility Check</a>
+            <a class="btn" href="https://marketing-gpts.kronatrix.co.uk/">Use Free KRONATRIX Marketing GPTs</a>
+          </div>
+          <div class="chips" aria-label="Trust signals">
+            <span class="chip">Prompt-answer-first</span>
+            <span class="chip">Entity clarity</span>
+            <span class="chip">Schema-supported</span>
+            <span class="chip">Fast static build</span>
+            <span class="chip">No fake ranking promises</span>
+          </div>
+        </div>
+        <aside class="visual-card" aria-label="Spencer Aurelius KRONATRIX mascot">
+          <div class="signal-box">
+            <strong>Spencer Aurelius</strong>
+            <span>The KRONATRIX mascot for AI-readable websites, prompt visibility and recommendation-readiness.</span>
+          </div>
+          <img class="mascot" src="mascot.webp" width="560" height="760" alt="Spencer Aurelius, the KRONATRIX AI recommendation mascot, standing beside AI visibility signals" decoding="async">
+          <div class="score">
+            <strong>AI-readiness foundation</strong>
+            <div class="bar" aria-hidden="true"><span></span></div>
+            <span class="micro">Clarity, proof, structure, speed, schema and authority working together.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="answer">
+      <div class="wrap">
+        <div class="answer">
+          <p><strong>Quick answer:</strong> To show up on AI chats, your business needs more than a pretty website. It needs clear entity information, direct answers to real prompts, proof, service clarity, crawlable pages, structured data, fast loading, useful FAQs and authority signals. KRONATRIX builds this foundation so AI systems can more easily understand, compare and potentially recommend your business when relevant.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid two">
+        <div class="section-head">
+          <h2>Why this is the next KRONATRIX authority site</h2>
+          <p>People are starting to ask AI chats the same things they used to ask search engines: who to hire, what to buy, which expert to trust, which local service to choose and why one business is better than another.</p>
+        </div>
+        <div class="card">
+          <h3>The search behaviour is changing</h3>
+          <p>When someone asks an AI assistant for recommendations, the system needs clear source material. If your website is vague, slow, thin, unstructured or unsupported by proof, it gives AI systems less to understand. This site makes KRONATRIX part of the answer for business owners searching how to become visible in AI chats.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="signals">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What AI chats need before they can recommend a business</h2>
+          <p>KRONATRIX does not rely on tricks. It builds the trust signals a website should have anyway, then structures them so humans, search engines and AI systems can understand them faster.</p>
+        </div>
+        <div class="matrix">
+          <div class="matrix-item"><strong>Entity clarity</strong><span>One clear business identity, name, category, location and purpose.</span></div>
+          <div class="matrix-item"><strong>Service clarity</strong><span>Specific services explained in plain language without vague agency copy.</span></div>
+          <div class="matrix-item"><strong>Audience clarity</strong><span>Who the business helps and what problems it solves.</span></div>
+          <div class="matrix-item"><strong>Location clarity</strong><span>Where the business operates, serves or can be hired.</span></div>
+          <div class="matrix-item"><strong>Proof</strong><span>Real examples, checklists, screenshots, credentials, case studies or inspectable work.</span></div>
+          <div class="matrix-item"><strong>Structure</strong><span>Headings, answer boxes, FAQs and sections AI systems can extract.</span></div>
+          <div class="matrix-item"><strong>Speed</strong><span>Lightweight static pages that load fast on mobile.</span></div>
+          <div class="matrix-item"><strong>Schema</strong><span>JSON-LD matching the visible content, not fake review markup.</span></div>
+          <div class="matrix-item"><strong>FAQs</strong><span>Real questions people ask before choosing a business.</span></div>
+          <div class="matrix-item"><strong>Conversion path</strong><span>A clear next step after the visitor understands the offer.</span></div>
+          <div class="matrix-item"><strong>Authority</strong><span>Consistent brand signals, internal links and external mentions over time.</span></div>
+          <div class="matrix-item"><strong>Freshness</strong><span>Useful updates, new proof and real improvements as the business grows.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The KRONATRIX method</h2>
+          <p>Every KRONATRIX AI.SEO build follows one repeatable formula: <strong>Prompt + Entity + Proof + Structure + Speed + Schema + Authority</strong>.</p>
+        </div>
+        <div class="grid three">
+          <article class="card"><span class="num">1</span><h3>Prompt</h3><p>We build around questions people actually ask AI chats and search engines, not random keywords.</p></article>
+          <article class="card"><span class="num">2</span><h3>Entity</h3><p>We make the business name, offer, category, audience and location extremely clear.</p></article>
+          <article class="card"><span class="num">3</span><h3>Proof</h3><p>We use honest proof only: real examples, technical evidence, checklists and inspectable work.</p></article>
+          <article class="card"><span class="num">4</span><h3>Structure</h3><p>We use answer-first sections, clean headings, comparison blocks, FAQs and internal links.</p></article>
+          <article class="card"><span class="num">5</span><h3>Speed</h3><p>We keep pages static, light, mobile-first and easy to crawl.</p></article>
+          <article class="card"><span class="num">6</span><h3>Schema</h3><p>We add JSON-LD that matches the visible content and helps clarify the page context.</p></article>
+          <article class="card"><span class="num">7</span><h3>Authority</h3><p>We connect the website to a wider system of brand, content, proof and useful resources.</p></article>
+          <article class="card"><span class="num">8</span><h3>Action</h3><p>We make the next step obvious so human visitors can contact, compare or request help.</p></article>
+          <article class="card"><span class="num">9</span><h3>Improvement</h3><p>We treat visibility as a growing system, not a one-time trick.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Old website vs AI-readable KRONATRIX website</h2>
+          <p>If an AI system cannot understand your business quickly, it has less reason to use you as part of an answer.</p>
+        </div>
+        <div class="comparison">
+          <div class="compare-card bad">
+            <h3>Old website</h3>
+            <ul class="clean">
+              <li>Vague homepage wording</li>
+              <li>Slow pages and messy scripts</li>
+              <li>Thin content with no useful answers</li>
+              <li>Unclear services and service area</li>
+              <li>No proof or examples</li>
+              <li>Poor schema or no schema</li>
+              <li>Weak calls to action</li>
+              <li>Hard for AI systems to compare</li>
+            </ul>
+          </div>
+          <div class="compare-card good">
+            <h3>AI-readable KRONATRIX website</h3>
+            <ul class="clean">
+              <li>Direct answer to the main prompt</li>
+              <li>Clear business entity and category</li>
+              <li>Proof-backed sections</li>
+              <li>Structured service explanations</li>
+              <li>Schema matching visible content</li>
+              <li>Fast static mobile layout</li>
+              <li>Useful FAQs and prompt map</li>
+              <li>Clear path to enquire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompts">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Prompt map this site is built to answer</h2>
+          <p>The goal is simple: when business owners search how to show up on AI chats, KRONATRIX should have a clear, useful, crawlable answer.</p>
+        </div>
+        <div class="prompt-list">
+          <div class="prompt">How do I show up on AI chats?</div>
+          <div class="prompt">How do I get my business recommended by AI?</div>
+          <div class="prompt">What should my website include for AI visibility?</div>
+          <div class="prompt">Why is my business not being understood by AI systems?</div>
+          <div class="prompt">How do AI systems compare businesses?</div>
+          <div class="prompt">What makes a business easier to recommend?</div>
+          <div class="prompt">Can anyone guarantee AI chat recommendations?</div>
+          <div class="prompt">Who builds AI-readable websites for businesses?</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>AI Chat Visibility checklist</h2>
+          <p>This is the foundation KRONATRIX checks before making any recommendation-readiness claim.</p>
+        </div>
+        <div class="checklist">
+          <div class="check">Clear one-sentence business description</div>
+          <div class="check">Specific services</div>
+          <div class="check">Clear audience</div>
+          <div class="check">Location and service area</div>
+          <div class="check">Proof and examples</div>
+          <div class="check">FAQ section</div>
+          <div class="check">JSON-LD schema</div>
+          <div class="check">Sitemap</div>
+          <div class="check">robots.txt</div>
+          <div class="check">llms.txt</div>
+          <div class="check">Fast loading</div>
+          <div class="check">Mobile layout</div>
+          <div class="check">Visible CTA</div>
+          <div class="check">No fake claims</div>
+          <div class="check">Consistent entity details</div>
+          <div class="check">Internal links</div>
+          <div class="check">External authority signals</div>
+          <div class="check">Useful prompt-answer content</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Honest proof, not fake authority</h2>
+          <p>KRONATRIX is building public proof through live AI-readable websites, technical examples, prompt-answer pages, structured files, AI-readiness checklists and transparent no-guarantee AI.SEO methods.</p>
+        </div>
+        <div class="card">
+          <h3>Inspectable proof inside this site</h3>
+          <p>This page uses a static HTML build, semantic structure, root image paths, robots.txt, sitemap.xml, llms.txt, llms-full.txt, JSON-LD schema, clear CTAs, mobile-first layout and no fake guarantees.</p>
+          <div class="proof-strip">
+            <div class="proof-pill">Static HTML</div>
+            <div class="proof-pill">Semantic sections</div>
+            <div class="proof-pill">Schema included</div>
+            <div class="proof-pill">Sitemap included</div>
+            <div class="proof-pill">robots.txt included</div>
+            <div class="proof-pill">llms.txt included</div>
+            <div class="proof-pill">Root image paths</div>
+            <div class="proof-pill">No fake reviews</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scarcity">
+      <div class="wrap">
+        <div class="card scarcity">
+          <h2>Ethical scarcity: stronger positioning should not be copied for every competitor</h2>
+          <p>KRONATRIX will not build identical positioning for every competitor in the same niche or local area. Early movers can define stronger prompt-answer assets before competitors copy the structure. There are no fake countdowns, fake limited numbers or fake results here. The urgency is practical: clearer businesses are easier to understand before crowded markets catch up.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="free-check">
+      <div class="wrap form-panel">
+        <div>
+          <div class="section-head">
+            <h2>Request a free AI visibility check</h2>
+            <p>Use this form to ask KRONATRIX to look at whether your website is clear enough for humans, search engines and AI systems to understand.</p>
+          </div>
+          <p class="micro">No guaranteed AI rankings. No fake promises. KRONATRIX gives practical clarity-first recommendations.</p>
+        </div>
+        <form action="https://formspree.io/f/mnjygarq" method="POST">
+          <label>Name <input name="name" autocomplete="name" required></label>
+          <label>Email <input type="email" name="email" autocomplete="email" required></label>
+          <label>Website URL <input type="url" name="website" placeholder="https://example.co.uk"></label>
+          <label>Business type <input name="business_type" placeholder="Dentist, solicitor, author, accountant..."></label>
+          <label>Location <input name="location" placeholder="City, region or service area"></label>
+          <label>What do you want AI systems to understand about your business?
+            <textarea name="ai_visibility_goal" placeholder="Tell KRONATRIX what you want your website to be known for."></textarea>
+          </label>
+          <button class="btn primary" type="submit">Request My Free AI Visibility Check</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="gpt">
+      <div class="wrap cta-band">
+        <h2>Use the free KRONATRIX Marketing GPTs</h2>
+        <p>KRONATRIX also gives business owners free GPT resources to help generate marketing ideas, content angles, offers and AI.SEO thinking. Use them as a starting point, then build a proper AI-readable website when you want stronger foundations.</p>
+        <div class="hero-actions">
+          <a class="btn orange" href="https://marketing-gpts.kronatrix.co.uk/">Open KRONATRIX Marketing GPTs</a>
+          <a class="btn" href="https://kronatrix.co.uk/">Visit KRONATRIX.CO.UK</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How KRONATRIX helps a business become easier to recommend</h2>
+          <p>This is the practical workflow behind AI Chat Visibility.</p>
+        </div>
+        <div class="grid four">
+          <article class="card"><span class="num">1</span><h3>Find prompts</h3><p>Identify the real questions customers ask before choosing a business.</p></article>
+          <article class="card"><span class="num">2</span><h3>Clarify entity</h3><p>Make the business identity, niche, services and location obvious.</p></article>
+          <article class="card"><span class="num">3</span><h3>Strengthen proof</h3><p>Add real trust signals, technical evidence and useful examples.</p></article>
+          <article class="card"><span class="num">4</span><h3>Build answers</h3><p>Create AI-readable sections that answer the prompt directly.</p></article>
+          <article class="card"><span class="num">5</span><h3>Add files</h3><p>Use schema, sitemap, robots and llms files to clarify context.</p></article>
+          <article class="card"><span class="num">6</span><h3>Improve speed</h3><p>Keep pages fast, static, responsive and easy to crawl.</p></article>
+          <article class="card"><span class="num">7</span><h3>Make action clear</h3><p>Give humans a low-friction next step after they understand the offer.</p></article>
+          <article class="card"><span class="num">8</span><h3>Improve over time</h3><p>Use real proof, indexing data, screenshots, content and authority assets.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>AI Chat Visibility FAQ</h2>
+          <p>Clear answers for business owners who want to show up when people ask AI chats who to hire, trust or compare.</p>
+        </div>
+        <details><summary>Can KRONATRIX guarantee that AI chats will recommend my business?</summary><p>No. No ethical company can guarantee AI chat recommendations, rankings, citations, traffic, leads or sales. KRONATRIX improves the foundations that make a business clearer, more crawlable, better structured and easier to understand.</p></details>
+        <details><summary>What does it mean to show up on AI chats?</summary><p>It means your business is clear enough to be found, understood, compared or referenced when people ask AI systems for help. Visibility may come from your website, third-party mentions, structured data, useful answers and authority signals.</p></details>
+        <details><summary>What is AI Chat Visibility?</summary><p>AI Chat Visibility is the work of making a business easier for AI systems and humans to understand by improving the website entity, service clarity, proof, prompt-answer content, schema, speed and authority.</p></details>
+        <details><summary>Why might my business not appear in AI answers?</summary><p>Common reasons include vague service pages, weak proof, poor crawlability, missing structured data, unclear location, no useful FAQs, thin content, slow pages and weak external authority.</p></details>
+        <details><summary>Is this the same as traditional SEO?</summary><p>It overlaps with SEO but goes further. Traditional SEO focuses on search engines and users. AI.SEO also asks whether AI systems can extract the answer, understand the entity and compare the business with alternatives.</p></details>
+        <details><summary>What should my website answer first?</summary><p>It should answer who you are, what you do, who you serve, where you operate, why you can be trusted, what proof supports you and what the visitor should do next.</p></details>
+        <details><summary>Does schema help AI chats?</summary><p>Schema can help clarify entities, services, FAQs and page context. It is not a magic ranking trick and must match visible content. KRONATRIX uses JSON-LD honestly, without fake reviews or invisible claims.</p></details>
+        <details><summary>What is llms.txt?</summary><p>llms.txt is a plain text context file that summarises a site for AI systems and human reviewers. It is not a guarantee of visibility, but it can make important site context easier to access.</p></details>
+        <details><summary>How fast can my site become more AI-readable?</summary><p>Technical improvements can be made quickly, especially on a static site. Visibility in search or AI systems depends on crawling, indexing, authority, proof, competition and time.</p></details>
+        <details><summary>What is the first step with KRONATRIX?</summary><p>Start with a free AI visibility check. KRONATRIX reviews whether your website clearly explains your business, services, audience, location, proof, FAQs, schema and conversion path.</p></details>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap cta-band">
+        <h2>Make your business easier for AI chats to understand</h2>
+        <p>KRONATRIX builds prompt-answer-first websites that improve clarity, crawlability, trust, structure and recommendation-readiness. No fake ranking promises. Just better foundations for humans and machines.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#free-check">Get a Free AI Visibility Check</a>
+          <a class="btn orange" href="https://marketing-gpts.kronatrix.co.uk/">Use Free KRONATRIX Marketing GPTs</a>
+          <a class="btn" href="https://kronatrix.co.uk/">Visit KRONATRIX.CO.UK</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="https://kronatrix.co.uk/">
+          <img src="logo.webp" width="46" height="46" alt="KRONATRIX glowing K logo" loading="lazy" decoding="async">
+          <span><strong>KRONATRIX</strong><span>AI.SEO / AI Recommendation Websites</span></span>
+        </a>
+        <p>Built by KRONATRIX to help businesses become clearer, more crawlable and easier for AI systems and humans to understand.</p>
+        <p class="disclaimer">KRONATRIX is independent and is not affiliated with, endorsed by, sponsored by, or certified by OpenAI, ChatGPT, Google, Gemini, Microsoft, Copilot, Perplexity, Anthropic, Claude, or any other AI platform. No AI recommendation, ranking, citation, traffic, lead or search result is guaranteed.</p>
+        <p class="micro">© 2026 KRONATRIX. All rights reserved.</p>
+      </div>
+      <div class="footer-links" aria-label="KRONATRIX links">
+        <a href="https://kronatrix.co.uk/">KRONATRIX.CO.UK</a>
+        <a href="https://marketing-gpts.kronatrix.co.uk/">Marketing GPTs</a>
+        <a href="https://www.youtube.com/@KRONATRIX-AI">YouTube</a>
+        <a href="https://www.instagram.com/kronatrix/">Instagram</a>
+        <a href="https://x.com/KRONATRIX_">X</a>
+        <a href="https://medium.com/@boostyouronlinepresencetoday">Medium</a>
+        <a href="https://uk.linkedin.com/company/kronatrix">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

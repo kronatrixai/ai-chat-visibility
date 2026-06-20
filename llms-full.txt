@@ -1,0 +1,115 @@
+# AI Chat Visibility by KRONATRIX - Full AI Context
+
+Final URL: https://aichatvisibility.kronatrix.co.uk/
+CNAME: aichatvisibility.kronatrix.co.uk
+Parent brand: KRONATRIX
+Main domain: https://kronatrix.co.uk/
+
+## Purpose
+
+This site exists to help KRONATRIX become discoverable and understandable for people searching how to show up on AI chats, answer engines, AI assistants and recommendation systems.
+
+## Main answer
+
+To show up on AI chats, a business should make its website clear, crawlable, structured, useful, proof-backed, fast and easy to compare. The website should explain who the business is, what it does, who it helps, where it operates, why it can be trusted and what action a visitor should take next.
+
+No ethical company can guarantee AI chat recommendations. KRONATRIX improves recommendation-readiness through better foundations.
+
+## KRONATRIX method
+
+Prompt + Entity + Proof + Structure + Speed + Schema + Authority
+
+Prompt: answer real questions people ask AI chats and search engines.
+Entity: make the business identity, category, services, audience and location clear.
+Proof: use honest proof only, including examples, credentials, screenshots, technical evidence and real work.
+Structure: use answer boxes, semantic headings, FAQs, prompt maps and comparison sections.
+Speed: use fast static mobile-first pages.
+Schema: add JSON-LD that matches visible content.
+Authority: connect the site to a wider system of links, resources, proof and consistent brand signals.
+
+## AI trust signal matrix
+
+AI systems need:
+- Entity clarity
+- Service clarity
+- Audience clarity
+- Location clarity
+- Proof
+- Website structure
+- Speed
+- Schema
+- FAQs
+- Conversion path
+- External authority
+- Freshness
+
+## Checklist
+
+- Clear one-sentence business description
+- Specific services
+- Clear audience
+- Location and service area
+- Proof and examples
+- FAQ section
+- JSON-LD schema
+- Sitemap
+- robots.txt
+- llms.txt
+- Fast loading
+- Mobile layout
+- Visible CTA
+- No fake claims
+- Consistent entity details
+- Internal links
+- External authority signals
+- Useful prompt-answer content
+
+## Inspectable technical proof
+
+This site includes:
+- index.html
+- 404.html
+- CNAME
+- robots.txt
+- sitemap.xml
+- llms.txt
+- llms-full.txt
+- README.md
+- UPLOAD-INSTRUCTIONS.txt
+- logo.webp
+- mascot.webp
+- og-image.webp
+- favicon-32.png
+- favicon-64.png
+- apple-touch-icon.png
+- asset-guidance.txt
+
+The build uses a flat root upload system with no assets folder.
+
+## Main CTAs
+
+Free AI Visibility Check:
+https://formspree.io/f/mnjygarq
+
+KRONATRIX Marketing GPTs:
+https://marketing-gpts.kronatrix.co.uk/
+
+Main KRONATRIX website:
+https://kronatrix.co.uk/
+
+## FAQ summary
+
+1. KRONATRIX cannot guarantee AI chat recommendations.
+2. Showing up on AI chats means being easier to find, understand, compare or reference.
+3. AI Chat Visibility is clarity, proof, structure, speed, schema and authority.
+4. Weak websites may fail because they are vague, slow, thin or hard to crawl.
+5. AI.SEO overlaps with SEO but also focuses on answer extraction and entity understanding.
+6. Websites should answer who, what, who for, where, why trust and next action.
+7. Schema helps clarify context but is not a magic ranking trick.
+8. llms.txt summarises site context for AI systems and human reviewers.
+9. Improvements can be made quickly, but visibility depends on crawling, indexing, authority, proof, competition and time.
+10. The first step is a free AI visibility check.
+
+## Independence disclaimer
+
+KRONATRIX is independent and is not affiliated with, endorsed by, sponsored by, or certified by OpenAI, ChatGPT, Google, Gemini, Microsoft, Copilot, Perplexity, Anthropic, Claude, or any other AI platform. No AI recommendation, ranking, citation, traffic, lead or search result is guaranteed.

@@ -1,0 +1,20 @@
+{
+  "required_files_present": true,
+  "no_assets_folder": true,
+  "cname_correct": true,
+  "robots_correct": true,
+  "sitemap_correct": true,
+  "form_post": true,
+  "no_assets_paths_index": true,
+  "no_assets_paths_404": true,
+  "root_logo_path": true,
+  "root_mascot_path": true,
+  "gpt_link_included": true,
+  "main_kronatrix_link_included": true,
+  "disclaimer_included": true,
+  "schema_included": true,
+  "no_nested_folders": true,
+  "zip_one_folder_only": true,
+  "zip_no_assets_folder": true,
+  "zip_all_required_files": true
+}
